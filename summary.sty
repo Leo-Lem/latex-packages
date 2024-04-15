@@ -77,6 +77,7 @@
 % ---------------------------------------------------------------------
 % Floats
 % ---------------------------------------------------------------------
+% default float placement H(ere)
 \RequirePackage{float}
 \floatplacement{figure}{H}
 \floatplacement{table}{H}
@@ -85,7 +86,11 @@
 % ---------------------------------------------------------------------
 % Title page with TOC
 % ---------------------------------------------------------------------
-\renewcommand*\numberline[1]{\hb@xt@4em{#1\hfil}} % fixes the table of contents text overlap
+% fixes the table of contents text overlap
+\renewcommand*\numberline[1]{\hb@xt@4em{#1\hfil}}
+
+% only show sections and subsections in the table of contents
+\setcounter{tocdepth}{2}
 
 \newcommand\subject[1]{\def\@subject{#1}}
 \newcommand\subtitle[1]{\def\@subtitle{#1}}
@@ -93,6 +98,7 @@
 
 \providecommand\@subtitle{Zusammenfassung}
 
+% creates a title page with the subject, subtitle and semester
 \newcommand\createtitle{
   \begin{titlepage}
     \title{
