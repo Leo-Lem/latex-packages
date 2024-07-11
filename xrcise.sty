@@ -19,6 +19,7 @@
 \renewcommand\@subtitle{Übungsaufgaben\ifsolutions~mit Lösungen\fi}
 
 
+
 % ---------------------------------------------------------------------
 % Exercises
 % ---------------------------------------------------------------------
@@ -36,10 +37,7 @@
 }
 
 \NewEnviron{solution}{
-  \ifsolutions
-    \subsubsection*{Lösung:}
-    \BODY
-  \fi
+  \psolution{\BODY}
 }
 
 % #1: optional exercise number
@@ -55,7 +53,9 @@
 
 \newcommand\psolution[1]{
   \ifsolutions
-    #1
+    \textcolor{gray}{#1}
+  \else
+    \textcolor{white}{#1}
   \fi
 }
 
