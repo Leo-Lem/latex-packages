@@ -1,6 +1,6 @@
 \documentclass{article}
 
-\usepackage[]{../.template/summary}
+\usepackage{../.template/summary}
 
 \subject{}
 \semester{Winter 2024}
